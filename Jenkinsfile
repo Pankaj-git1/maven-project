@@ -21,5 +21,16 @@ git branch: 'master', url: 'https://github.com/Pankaj-git1/maven-project.git'
       }
 }
   } 
+	stage('Test the code')
+  {
+    steps
+    {
+      withMaven(jdk: 'Local_Java', maven: 'Local_Maven') 
+	  {
+      sh 'mvn test'
+      }
+}
+  } 
+	
    } 
    }
