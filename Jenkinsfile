@@ -1,9 +1,9 @@
 pipeline
 {
 agent any
-Stages
+stages
 {
-Stage('Down load the code from SCM')
+stage('Down load the code from SCM')
   {
     steps
 {
