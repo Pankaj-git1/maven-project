@@ -1,6 +1,6 @@
 pipeline
-agent any
 {
+agent any
 Stages
 {
 Stage('Down load the code from SCM')
