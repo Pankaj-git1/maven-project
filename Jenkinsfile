@@ -13,9 +13,9 @@ git branch: 'master', url: 'https://github.com/Pankaj-git1/maven-project.git'
 
   stage('compile the code')
   {
-    steps withAnt(jdk: 'Local_Java',maven: 'Local_Maven') 
+    steps withMaven(jdk: 'Local_Java',maven: 'Local_Maven') 
     {
-    sh 'mvn package'
+    sh 'mvn compile'
 }
   } 
     
