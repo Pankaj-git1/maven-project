@@ -15,7 +15,7 @@ git branch: 'master', url: 'https://github.com/Pankaj-git1/maven-project.git'
   {
     steps withAnt(jdk: 'Local_Java',maven: 'Local_Maven') 
     {
-    sh mvn package
+    sh 'mvn package'
 }
   } 
     
