@@ -31,7 +31,16 @@ git branch: 'master', url: 'https://github.com/Pankaj-git1/maven-project.git'
       }
 }
   } 
-	
+	stage('build')
+  {
+    steps
+    {
+      withMaven(jdk: 'Local_Java', maven: 'Local_Maven') 
+	  {
+      sh 'mvn build'
+      }
+}
+  } 
 	
    } 
    }
