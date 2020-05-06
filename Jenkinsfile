@@ -37,7 +37,7 @@ git branch: 'master', url: 'https://github.com/Pankaj-git1/maven-project.git'
     {
       withMaven(jdk: 'Local_Java', maven: 'Local_Maven') 
 	  {
-      sh 'mvn build'
+      sh 'mvn package'
       }
 }
   } 
