@@ -17,10 +17,13 @@ git branch: 'master', url: 'https://github.com/Pankaj-git1/maven-project.git'
     {
       withMaven(jdk: 'Local_Java', maven: 'Local_Maven') 
 	  {
-      sh 'mvn compile'
+		  withSonarQubeEnv(credentialsId: 'jenkinssonarqube', installationName: 'sonar')
+		  {
+          sh 'mvn sonar:sonar compile'
       }
 }
   } 
+  }
 	stage('Test the code')
   {
     steps
